@@ -11,12 +11,25 @@ import java.awt.geom.GeneralPath;
 import java.awt.geom.Line2D;
 
 /**
- * Created by William Bennett on 7/26/2016.
+ A vector drawing of a person that implements
+ the Shape interface, and so can be drawn, as well as
+ rotated, scaled, etc.
+
+ @author William Bennettt
+ @version for CS56, M16, UCSB
+
  */
 public class Person extends GeneralPathWrapper implements Shape {
 
 
+    /**
+     Constructor
 
+     @param x x coord of top left corner of the rectangle surrounding the person
+     @param y y coord of top left corner of the rectangle surrounding the person
+     @param width width of the rectangle surrounding the person
+     @param height of the rectangle surrounding the person
+     */
     public Person(double x, double y, double width, double height) {
         // The head takes up 25% of the
         double headWidth = width * .25;

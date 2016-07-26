@@ -18,19 +18,19 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+    /** Draw a picture with a single person
      */
     
     public static void drawPicture1(Graphics2D g2) {
 	    Person person = new Person(250, 250, 100, 200);
-        Rectangle boundingRect = new Rectangle(250, 250, 100, 200);
-        Rectangle reverseRect = new Rectangle(250, 50, 100, 200);
+        Wizard wizard = new Wizard(500, 500, 125, 200);
         g2.setColor(Color.orange);
         g2.draw(person);
 
-        g2.setColor(Color.RED);
-        g2.draw(boundingRect);
-        g2.draw(reverseRect);
+        g2.setColor(Color.blue);
+        g2.draw(wizard);
+
+        g2.drawString("A wizard and his servant by William Bennett", 10, 10);
     }
 
 
@@ -38,62 +38,30 @@ public class AllMyDrawings
      */
     public static void drawPicture2(Graphics2D g2) {
 
-	// Draw some coffee cups.
 
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	CoffeeCup tallSkinny = new CoffeeCup(20,150,20,40);
-	CoffeeCup shortFat = new CoffeeCup(20,250,40,20);
 
-	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	g2.setColor(Color.BLUE);    g2.draw(tallSkinny);
-	g2.setColor(Color.MAGENTA); g2.draw(shortFat);
+	Person normal = new Person(200, 200, 150, 200);
+        Person fat = new Person(50, 50, 175, 100);
 
-	edu.ucsb.cs56.drawings.pconrad.advanced.House h1 = new House(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(h1);
 
-	// Make a black house that's half the size,
-	// and moved over 150 pixels in x direction
-	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(h2);
 
-	// Here's a house that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
-	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
+	    g2.setColor(Color.BLACK);
+        g2.draw(normal);
 
-	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
+        Shape scaledNormal = ShapeTransforms.scaledCopyOf(normal, 1.5, 1.5);
+        scaledNormal = ShapeTransforms.translatedCopyOf(scaledNormal, 0, 200);
+        g2.setColor(Color.RED);
+        g2.draw(scaledNormal);
 
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-	// #002FA7 is "International Klein Blue" according to Wikipedia
-	// In HTML we use #, but in Java (and C/C++) its 0x
+        g2.draw(fat);
+        Stroke thick = new BasicStroke(3);
+        Stroke original = g2.getStroke();
 
-	Stroke orig=g2.getStroke();
-	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7));
-	g2.draw(h2);
+        g2.setStroke(thick);
+        g2.setColor(Color.DARK_GRAY);
+        g2.draw(fat);
 
-	// Draw two houses with Windows
-
-	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
-
-	g2.draw(hw1);
-	g2.setColor(new Color(0x8F00FF));
-
-	// Rotate the second house 45 degrees around its center.
-	Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/4.0);
-
-	g2.draw(hw3);
-
-	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-
-	g2.setStroke(orig);
-	g2.setColor(Color.BLACK);
-	g2.drawString("A bunch of Coffee Cups and a few houses by Phill Conrad", 20,20);
+        g2.drawString("Various people, by William Bennett", 30, 30);
     }
 
     /** Draw a different picture with a few houses and coffee cups
@@ -102,17 +70,15 @@ public class AllMyDrawings
     public static void drawPicture3(Graphics2D g2) {
 
 	// label the drawing
+        Wizard overlord = new Wizard(400, 10, 150, 225);
+        Person servant = new Person(25, 300, 50, 100);
+        g2.drawString("A wizard and his gnome servants, by William Bennett", 350, 500);
+        g2.setColor(Color.blue);
+	    g2.draw(overlord);
 
-	g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
-
-
-	// Draw some coffee cups.
-
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	
-	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	
+        g2.setColor(Color.orange);
+        for (int i = 0; i < 5; i++) {
+            g2.draw(ShapeTransforms.translatedCopyOf(servant, i * 150, 0));
+        }
     }       
 }
