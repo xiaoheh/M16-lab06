@@ -19,5 +19,5 @@ javadoc/
 hs_err_pid*
 
 # IntelliJ files
-.iml
+*.iml
 .idea/
