@@ -49,11 +49,11 @@ public class PictureComponent extends JComponent
         // Now the fun part---we draw stuff!
         // @@@ YOU'LL CUSTOMIZE EVERYTHING BELOW THIS LINE
 	
-        Rectangle2D.Double house = new Rectangle2D.Double(100, 200, 100, 100);
+	Rectangle2D.Double house = new Rectangle2D.Double(100, 200, 100, 100);
         g2.draw( house);
 	
         // lroof and rroof are the left and right sides of the roof,
-        Line2D.Double lroof = new Line2D.Double(100, 200, 150, 150);
+	Line2D.Double lroof = new Line2D.Double(100, 200, 150, 150);
         Line2D.Double rroof = new Line2D.Double(150,150, 200,200);
 	
         g2.draw(lroof);
