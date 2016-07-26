@@ -1,6 +1,6 @@
 package edu.ucsb.cs56.drawings.wbennett.advanced;
 
-import edu.ucsb.cs56.drawings.pconrad.advanced.AllMyDrawings;
+import edu.ucsb.cs56.drawings.wbennett.advanced.AllMyDrawings;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;

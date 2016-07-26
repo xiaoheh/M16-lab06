@@ -1,7 +1,6 @@
 package edu.ucsb.cs56.drawings.wbennett.advanced;
 
-import edu.ucsb.cs56.drawings.pconrad.advanced.*;
-import edu.ucsb.cs56.drawings.pconrad.advanced.MultiPictureComponent;
+
 
 import javax.swing.JFrame;
 
@@ -31,10 +30,10 @@ public class MultiPictureViewer
        // Set the size to whatever size you like (width, height)
        // For projects you turn in, lets not get any bigger than 640,480
        
-       frame.setSize(640,480); // @@@ MODIFY THIS LINE IF YOU LIKE
+       frame.setSize(700,700); // @@@ MODIFY THIS LINE IF YOU LIKE
        
        // Set your own title
-       frame.setTitle("Phill's First Drawing"); // @@@ MODIFY THIS LINE
+       frame.setTitle("William's First Drawing"); // @@@ MODIFY THIS LINE
        
        // Always do this so that the red X (or red circle) works
        // to close the window. 
@@ -43,8 +42,7 @@ public class MultiPictureViewer
        
        // Instantiate your drawing as a "component"
        
-       edu.ucsb.cs56.drawings.pconrad.advanced.MultiPictureComponent component =
-	   new MultiPictureComponent(whichPicture);
+       MultiPictureComponent component = new MultiPictureComponent(whichPicture);
       
       // Always add your component to the frame 
       // and then make the window visible

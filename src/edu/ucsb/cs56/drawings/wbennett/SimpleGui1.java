@@ -22,7 +22,7 @@ public class SimpleGui1 {
 	
 	JButton button = new JButton("Do it I dare you") ;
 	
-	java.awt.Color myColor = new java.awt.Color(204,255,000);   // R, G, B values.
+	java.awt.Color myColor = new java.awt.Color(255, 0, 181);   // R, G, B values.
 	button.setBackground(myColor);
 	button.setOpaque(true);
 	
