@@ -27,8 +27,8 @@ You can test this with studentName set to <code>pconrad</code>, <code>andrewberl
 
 # Feedback repos
 
-* [Zhancheng](https://github.com/UCSB-CS56-M16/FEEDBACK_zhanchengqian_lab06) 
-* [Zhiliang](https://github.com/UCSB-CS56-M16/FEEDBACK_liang121900_lab06) 
-* [William](https://github.com/UCSB-CS56-M16/FEEDBACK_MadRubicant_lab06)
-* [Steven](https://github.com/UCSB-CS56-M16/FEEDBACK_SElegans_lab06)
-* [Chunqing](https://github.com/UCSB-CS56-M16/FEEDBACK_chunqing_lab06)
+* [Zhancheng Qian](https://github.com/UCSB-CS56-M16/FEEDBACK_zhanchengqian_lab06) 
+* [Zhiliang Xie](https://github.com/UCSB-CS56-M16/FEEDBACK_liang121900_lab06) 
+* [William Bennett](https://github.com/UCSB-CS56-M16/FEEDBACK_MadRubicant_lab06)
+* [Steven Fields](https://github.com/UCSB-CS56-M16/FEEDBACK_SElegans_lab06)
+* [Chunqing Liu](https://github.com/UCSB-CS56-M16/FEEDBACK_chunqing_lab06)
