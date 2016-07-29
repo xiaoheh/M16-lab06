@@ -31,4 +31,4 @@ You can test this with studentName set to <code>pconrad</code>, <code>andrewberl
 * [Zhiliang Xie](https://github.com/UCSB-CS56-M16/FEEDBACK_liang121900_lab06) 
 * [William Bennett](https://github.com/UCSB-CS56-M16/FEEDBACK_MadRubicant_lab06)
 * [Steven Fields](https://github.com/UCSB-CS56-M16/FEEDBACK_SElegans_lab06)
-* [Chunqing Liu](https://github.com/UCSB-CS56-M16/FEEDBACK_chunqing_lab06)
+* [Chunqing Liu](https://github.com/UCSB-CS56-M16/FEEDBACK_chunqingliu_lab06)
